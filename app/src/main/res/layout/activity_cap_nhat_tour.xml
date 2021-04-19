@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CapNhatTour">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FCFCFD"
+            android:orientation="vertical"
+            android:paddingLeft="15px"
+            android:paddingRight="15px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="403dp"
+                android:layout_marginTop="100dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="#0F3E63"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="6dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDanhSachTour"
+                        android:layout_width="281dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="#DAA7A7"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Chỉnh Sửa Thông Tin Tour"
+                        android:textColor="#EDEDF4"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.064"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="332dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnDatLai"
+                            android:layout_width="74dp"
+                            android:layout_height="41dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="36dp"
+                            android:backgroundTint="#3F51B5"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Đặt Lại"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/btnLuu"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+
+                        <TextView
+                            android:id="@+id/txtMaTour"
+                            android:layout_width="80dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="40dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Mã Tour:"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtLoTrinh"
+                            android:layout_width="77dp"
+                            android:layout_height="28dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Lộ Trình:"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtMaTour" />
+
+                        <TextView
+                            android:id="@+id/txtToi"
+                            android:layout_width="23dp"
+                            android:layout_height="17dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="35dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Tới"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toEndOf="@+id/spinnerFrom"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                        <Spinner
+                            android:id="@+id/spinnerFrom"
+                            android:layout_width="102dp"
+                            android:layout_height="31dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="30dp"
+                            app:layout_constraintStart_toEndOf="@+id/txtLoTrinh"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                        <Spinner
+                            android:id="@+id/spinnerTo"
+                            android:layout_width="110dp"
+                            android:layout_height="31dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="27dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toEndOf="@+id/txtToi"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                        <TextView
+                            android:id="@+id/txtHanhTrinh"
+                            android:layout_width="80dp"
+                            android:layout_height="26dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Hành Trình:"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtLoTrinh" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber"
+                            android:layout_width="47dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtHanhTrinh"
+                            app:layout_constraintTop_toBottomOf="@+id/spinnerFrom" />
+
+                        <TextView
+                            android:id="@+id/txtNgay"
+                            android:layout_width="43dp"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="36dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Ngày"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber"
+                            app:layout_constraintTop_toBottomOf="@+id/txtToi" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber2"
+                            android:layout_width="40dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginTop="20dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtNgay"
+                            app:layout_constraintTop_toBottomOf="@+id/spinnerTo" />
+
+                        <TextView
+                            android:id="@+id/txtGiaTour"
+                            android:layout_width="80dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="36dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Giá Tour:"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtHanhTrinh" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber3"
+                            android:layout_width="211dp"
+                            android:layout_height="37dp"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="16dp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtGiaTour"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+                        <Button
+                            android:id="@+id/btnLuu"
+                            android:layout_width="63dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="116dp"
+                            android:layout_marginTop="36dp"
+                            android:backgroundTint="#3F51B5"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Lưu"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+
+                        <Button
+                            android:id="@+id/btnThoat"
+                            android:layout_width="74dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="36dp"
+                            android:backgroundTint="#3F51B5"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="Thoát"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toEndOf="@+id/btnDatLai"
+                            app:layout_constraintTop_toBottomOf="@+id/editTextNumber3" />
+
+                        <TextView
+                            android:id="@+id/txtDem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="36dp"
+                            android:text="Đêm"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.185"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber2"
+                            app:layout_constraintTop_toBottomOf="@+id/spinnerTo" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="29dp"
+                            android:layout_height="22dp"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="27dp"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:text="VND"
+                            android:textColor="#FFFFFF"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.23"
+                            app:layout_constraintStart_toEndOf="@+id/editTextNumber3"
+                            app:layout_constraintTop_toBottomOf="@+id/txtDem" />
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName"
+                            android:layout_width="253dp"
+                            android:layout_height="36dp"
+                            android:layout_marginStart="23dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginEnd="28dp"
+                            android:ems="10"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:inputType="textPersonName"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtMaTour"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="13dp"
+                            android:layout_marginTop="31dp"
+                            android:backgroundTint="#7A0D39"
+                            android:text="Xóa Tour"
+                            android:textSize="8sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtGiaTour" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

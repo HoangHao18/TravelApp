@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".qltour">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_MainContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0F3E63"
+            android:orientation="vertical"
+            android:paddingLeft="15px"
+            android:paddingRight="15px">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_container"
+                android:layout_width="398dp"
+                android:layout_height="663dp"
+                android:layout_marginTop="10dp"
+                android:layoutDirection="inherit"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="397dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/txtDanhSachTour"
+                        android:layout_width="178dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Danh Sách Tour"
+                        android:textColor="#EAECF1"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/edMaGiamGia"
+                    android:layout_width="188dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints=""
+                    android:background="@drawable/my_border"
+                    android:ems="10"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:inputType="textPersonName"
+                    android:text="Search..."
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="34dp"
+                    android:layout_height="31dp"
+
+                    android:backgroundTint="#0F3E63"
+                    android:backgroundTintMode="src_in"
+                    android:tint="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/edMaGiamGia"
+                    app:layout_constraintEnd_toEndOf="@+id/edMaGiamGia"
+                    app:layout_constraintTop_toTopOf="@+id/edMaGiamGia"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+
+                <ImageButton
+                    android:id="@+id/btnThemTour"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="183dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#0F3E63"
+                    android:backgroundTintMode="src_in"
+                    android:tint="#FFFFFF"
+                    app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edMaGiamGia"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="398dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edMaGiamGia">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#1BAE9A"
+                        android:minHeight="80px">
+
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="STT"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Mã Tour"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="115dp"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Lộ Trình"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Hành Trình"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="71dp"
+                            android:layout_height="match_parent"
+                            android:background="#2C72A6"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Giá Tour"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#FFFFFF"
+                        android:minHeight="70px">
+
+
+                        <ImageButton
+                            android:id="@+id/btnThaoTac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:backgroundTint="#0F3E63"
+                            android:backgroundTintMode="screen"
+                            android:foregroundTint="#FFFFFF"
+                            android:tint="#0F3E63"
+                            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="12px"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="T01"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="Hà Nội - Đà Lạt"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="3 ngày 2 đêm"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="74dp"
+                            android:layout_height="match_parent"
+                            android:background="#EEF8F8"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="6000000"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#FFFFFF"
+                        android:minHeight="70px">
+
+
+                        <ImageButton
+                            android:id="@+id/btnThaoTac2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:backgroundTint="#0F3E63"
+                            android:backgroundTintMode="screen"
+                            android:foregroundTint="#FFFFFF"
+                            android:tint="#0F3E63"
+                            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="12px"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="T01"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="Hà Nội - Đà Lạt"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="3 ngày 2 đêm"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="74dp"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="6000000"
+                            android:textAlignment="inherit"
+                            android:textColor="#060E15"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+
+
+                    <!--                    <TableRow-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:minHeight="70px">-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="36dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="2"-->
+                    <!--                            android:textAlignment="center"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="T02"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="Đà Lạt - Vũng Tàu"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="2 ngày 1 đêm"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="77dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="3000000"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+
+                    <!--                    </TableRow>-->
+
+
+                </TableLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</LinearLayout>
